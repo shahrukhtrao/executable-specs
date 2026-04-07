@@ -1,0 +1,91 @@
+{
+  "version": "1.0",
+  "threshold": 75,
+  "sections": {
+    "problem_statement": {
+      "weight": 0.20,
+      "dimensions": [
+        "Evidence-based, not hypothetical",
+        "Business impact quantified qualitatively",
+        "3-5 bullets maximum"
+      ]
+    },
+    "user_stories": {
+      "weight": 0.20,
+      "dimensions": [
+        "Grouped by role (As a [ROLE]...)",
+        "INVEST-compliant",
+        "Covers primary and edge-case flows",
+        "Each story has acceptance criteria"
+      ]
+    },
+    "services_impacted": {
+      "weight": 0.15,
+      "dimensions": [
+        "Explicit list present",
+        "No vague references",
+        "Covers upstream and downstream dependencies",
+        "Read/write access patterns noted"
+      ]
+    },
+    "success_criteria": {
+      "weight": 0.15,
+      "dimensions": [
+        "Qualitative language with measurement methodology (Rule #1)",
+        "No raw numbers or specific targets",
+        "Each criterion is verifiable"
+      ]
+    },
+    "solution": {
+      "weight": 0.15,
+      "dimensions": [
+        "Describes WHAT not HOW (Rule #2)",
+        "3-5 bullets maximum",
+        "No architecture decisions"
+      ]
+    },
+    "hard_requirements": {
+      "weight": 0.10,
+      "dimensions": [
+        "Boundaries clearly defined",
+        "Dependencies listed",
+        "Constraints are actionable"
+      ]
+    },
+    "length_and_format": {
+      "weight": 0.05,
+      "dimensions": [
+        "100-200 lines (Rule #4)",
+        "Proper template structure followed",
+        "Requirement IDs assigned to all discrete requirements"
+      ]
+    }
+  },
+  "hard_fail_checks": [
+    "Architecture decisions present in Part 1 (violates Rule #2)",
+    "Specific numerical targets without measurement methodology (violates Rule #1)",
+    "Missing services-impacted section (violates Rule #5)",
+    "Any [TBD] placeholder present",
+    "Exceeds 200 lines in Part 1",
+    "Component-based organization instead of user-story format (violates Rule #3)",
+    "Missing Requirement IDs on discrete requirements"
+  ],
+  "quality_signals": {
+    "vague_language": {
+      "flag_words": ["improve", "optimize", "enhance", "better", "streamline", "leverage"],
+      "action": "Flag for specificity — each instance must be accompanied by measurable criteria"
+    },
+    "tautology": {
+      "description": "Circular definitions where the requirement restates the solution",
+      "action": "Flag and request rewrite"
+    },
+    "missing_acceptance_criteria": {
+      "description": "User story without Given/When/Then or equivalent",
+      "action": "Flag for addition"
+    },
+    "hedging_language": {
+      "flag_words": ["might", "could potentially", "may help", "should hopefully"],
+      "action": "Flag — PRDs state requirements, not hopes"
+    }
+  }
+}

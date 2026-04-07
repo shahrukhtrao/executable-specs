@@ -1,0 +1,60 @@
+{
+  "version": "1.0",
+  "threshold": 80,
+  "sections": {
+    "ears_requirements": {
+      "weight": 0.25,
+      "dimensions": [
+        "Every requirement uses WHEN [condition] THE SYSTEM SHALL [behavior] pattern",
+        "No ambiguous language",
+        "Requirements are discrete and testable"
+      ]
+    },
+    "architecture_design": {
+      "weight": 0.20,
+      "dimensions": [
+        "Data models defined",
+        "Sequence diagrams or interaction descriptions present",
+        "Component interactions clearly documented"
+      ]
+    },
+    "acceptance_criteria": {
+      "weight": 0.20,
+      "dimensions": [
+        "Given/When/Then for every requirement",
+        "Covers happy path and error paths",
+        "Edge cases identified"
+      ]
+    },
+    "implementation_plan": {
+      "weight": 0.15,
+      "dimensions": [
+        "Ordered tasks with dependencies",
+        "Each task is scoped to a single PR",
+        "Implementation order is logical"
+      ]
+    },
+    "risks_mitigations": {
+      "weight": 0.10,
+      "dimensions": [
+        "Risks identified with concrete mitigations",
+        "Not generic — specific to this feature",
+        "Rollback strategy defined"
+      ]
+    },
+    "constraints_performance": {
+      "weight": 0.10,
+      "dimensions": [
+        "Performance targets quantified",
+        "Testing strategy for each constraint",
+        "Resource limits defined"
+      ]
+    }
+  },
+  "hard_fail_checks": [
+    "Any [TBD] placeholder anywhere in the document",
+    "Missing EARS notation in requirements section",
+    "Acceptance criteria absent for any stated requirement",
+    "No implementation ordering or dependency mapping"
+  ]
+}
