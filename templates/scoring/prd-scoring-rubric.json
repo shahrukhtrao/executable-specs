@@ -76,7 +76,7 @@
     "Architecture decisions present in Part 1 (violates Rule #2)",
     "Specific numerical targets without measurement methodology (violates Rule #1)",
     "Missing services-impacted section (violates Rule #5)",
-    "Any [TBD] placeholder present",
+    "Any [TBD] or [NEEDS INPUT] placeholder present",
     "Exceeds 200 lines in Part 1",
     "Component-based organization instead of user-story format (violates Rule #3)",
     "Missing Requirement IDs on discrete requirements",
