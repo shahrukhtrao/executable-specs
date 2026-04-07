@@ -1,6 +1,6 @@
 # [Feature Name] PRD
 
-
+**Feature ID:** [FEAT-{category}-{name}]
 
 **Status:** Draft
 
@@ -159,6 +159,47 @@
 **[Success criterion 4 - qualitative statement]**
 
 - Measure: [How to measure this]
+
+
+
+### Verification Criteria
+
+<!-- This section defines how to verify that the shipped feature matches the PRD.
+     The Product Readiness Agent uses this to assemble a completeness scorecard.
+     Every item must be machine-checkable or explicitly linked to a test artifact. -->
+
+
+
+#### Required Analytics Events
+
+- `REQ-{FEATURE}-001`: [Event name] — [What it tracks, when it fires]
+- `REQ-{FEATURE}-002`: [Event name] — [What it tracks, when it fires]
+- [Add more as needed — every user-facing behavior should have a tracking event]
+
+
+
+#### Required Test Scenarios
+
+- `REQ-{FEATURE}-010`: [Happy path scenario] — [Expected outcome]
+- `REQ-{FEATURE}-011`: [Edge case scenario] — [Expected outcome]
+- `REQ-{FEATURE}-012`: [Error/failure scenario] — [Expected outcome]
+- [Add more — cover happy path, edge cases, and error paths for every user story]
+
+
+
+#### Performance Thresholds
+
+- `REQ-{FEATURE}-020`: [What to measure] — [Qualitative threshold + measurement methodology, per Rule #1]
+- `REQ-{FEATURE}-021`: [What to measure] — [Qualitative threshold + measurement methodology]
+
+
+
+#### Acceptance Criteria (Machine-Checkable)
+
+- `REQ-{FEATURE}-030`: Given [precondition], When [action], Then [expected result]
+- `REQ-{FEATURE}-031`: Given [precondition], When [action], Then [expected result]
+- `REQ-{FEATURE}-032`: Given [precondition], When [action], Then [expected result]
+- [Every requirement from User Stories should map to at least one acceptance criterion here]
 
 
 

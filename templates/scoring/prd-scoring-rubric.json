@@ -1,9 +1,9 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "threshold": 75,
   "sections": {
     "problem_statement": {
-      "weight": 0.20,
+      "weight": 0.15,
       "dimensions": [
         "Evidence-based, not hypothetical",
         "Business impact quantified qualitatively",
@@ -11,7 +11,7 @@
       ]
     },
     "user_stories": {
-      "weight": 0.20,
+      "weight": 0.15,
       "dimensions": [
         "Grouped by role (As a [ROLE]...)",
         "INVEST-compliant",
@@ -20,7 +20,7 @@
       ]
     },
     "services_impacted": {
-      "weight": 0.15,
+      "weight": 0.10,
       "dimensions": [
         "Explicit list present",
         "No vague references",
@@ -29,7 +29,7 @@
       ]
     },
     "success_criteria": {
-      "weight": 0.15,
+      "weight": 0.10,
       "dimensions": [
         "Qualitative language with measurement methodology (Rule #1)",
         "No raw numbers or specific targets",
@@ -52,12 +52,23 @@
         "Constraints are actionable"
       ]
     },
+    "verification_criteria": {
+      "weight": 0.20,
+      "dimensions": [
+        "Required analytics events listed with Requirement IDs",
+        "Required test scenarios cover happy path, edge cases, and error paths",
+        "Performance thresholds defined qualitatively with measurement methodology",
+        "Machine-checkable acceptance criteria in Given/When/Then format",
+        "Every user story maps to at least one acceptance criterion"
+      ]
+    },
     "length_and_format": {
       "weight": 0.05,
       "dimensions": [
         "100-200 lines (Rule #4)",
         "Proper template structure followed",
-        "Requirement IDs assigned to all discrete requirements"
+        "Requirement IDs assigned to all discrete requirements",
+        "Feature ID present in header"
       ]
     }
   },
@@ -68,7 +79,10 @@
     "Any [TBD] placeholder present",
     "Exceeds 200 lines in Part 1",
     "Component-based organization instead of user-story format (violates Rule #3)",
-    "Missing Requirement IDs on discrete requirements"
+    "Missing Requirement IDs on discrete requirements",
+    "Missing Verification Criteria section",
+    "No analytics events defined",
+    "No machine-checkable acceptance criteria"
   ],
   "quality_signals": {
     "vague_language": {
