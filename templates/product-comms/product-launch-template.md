@@ -11,7 +11,15 @@ approved_date: null
 **Status:** Draft | In Review | Approved
 **Author:** [PM Name]
 **CMO Review:** Pending | Approved
-**Template Version:** 1.0
+**Template Version:** 2.0
+
+---
+
+## Launch Summary
+
+**Headline:** [COMPANY] announces [FEATURE] to enable [TARGET CUSTOMER] to [BENEFIT]
+
+**Summary:** [3-4 sentences describing what launched, who it is for, and why it matters. Written from launch-day perspective. Generated after the 9-question meeting as a synthesis artifact.]
 
 ---
 
@@ -27,6 +35,15 @@ approved_date: null
 
 **How components work together:**
 [Describe the main components and how they interact]
+
+---
+
+## Company Perspective
+
+**Why we are building this:**
+> "[Quote from Eco leadership on why this problem matters and why now. Should connect to the product narrative ladder. Source: PRD strategic context or 9-question meeting.]"
+
+-- [Name], [Role] at Eco
 
 ---
 
@@ -47,17 +64,18 @@ approved_date: null
 
 ---
 
-## 3. Problems & Pain Points
+## 3. Problems and Pain Points
 
-**Core Challenge:** [The main problem this solves]
+**Top problems (ranked by severity):**
+1. [Most severe problem] — Impact: [quantified cost/risk to customer]
+2. [Second problem] — Impact: [quantified cost/risk]
+3. [Third problem, if applicable] — Impact: [quantified cost/risk]
 
 **Why Alternatives Fail:**
-- [Alternative 1 failure mode]
-- [Alternative 2 failure mode]
+- [Alternative 1] fails to solve problem #1 because [reason]
+- [Alternative 2] fails to solve problem #2 because [reason]
 
-**Cost:** [What does not solving this cost the customer?]
-
-**Emotional Tension:** [What frustration does this address?]
+**Emotional Tension:** [What frustration does this address for the target persona?]
 
 ---
 
@@ -102,6 +120,15 @@ approved_date: null
 
 ---
 
+## Customer Voice
+
+**Hypothetical customer quote:**
+> "[A realistic quote from a target persona describing their pain point and how this feature resolves it. MUST use language from S7 Customer Language. MUST reference a problem from S3. Do NOT fabricate — ground in PRD user stories and transcript verbatims.]"
+
+-- [Persona name], [Role] at [Company type from S2 Target Audience]
+
+---
+
 ## 8. Proof Points
 
 **Metrics:** [Numbers that prove value]
@@ -124,19 +151,35 @@ approved_date: null
 
 ---
 
+## FAQ (Required for partner-facing features; optional otherwise)
+
+### Internal
+- **Q:** [Stakeholder question about approach or tradeoffs]
+  **A:** [Answer grounded in PRD and meeting transcript]
+
+### External
+- **Q:** [Customer or partner question about usage, limitations, or migration]
+  **A:** [Answer grounded in S1-S8]
+
+---
+
 ## Gaps Summary
 
 | Section | Status | Needed |
 |---------|--------|--------|
+| Launch Summary | | |
 | Product Overview | | |
+| Company Perspective | | |
 | Target Audience | | |
-| Problems & Pain Points | | |
+| Problems and Pain Points | | |
 | Competitive Landscape | | |
 | Differentiation | | |
 | Switching Dynamics | | |
 | Customer Language | | |
+| Customer Voice | | |
 | Proof Points | | |
 | Goals | | |
+| FAQ | | |
 
 ---
 

@@ -5,6 +5,25 @@ All notable changes to the product launch template will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this template adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2026-04-08
+
+### Added
+- **Launch Summary** section (before S1) — PRFAQ-inspired headline and summary synthesis artifact
+- **Company Perspective** section (after S1) — leadership quote connecting to product narrative ladder
+- **Customer Voice** section (after S7) — hypothetical customer quote grounded in S3 problems and S7 language
+- **FAQ** section (final, conditional) — internal and external Q&A for partner-facing features
+
+### Changed
+- **S3 Problems & Pain Points** rewritten to enforce ranked problem list with quantified impact
+- Gaps Summary table updated to include all new sections
+- Template version bumped to 2.0
+
+### Rationale
+- Based on PRFAQ research spike (PRO-267) analyzing Amazon-style press release / FAQ methodology
+- Approved changes prioritized by customer impact and CMO feedback patterns
+
+---
+
 ## [1.0.0] - 2026-04-07
 
 ### Added
