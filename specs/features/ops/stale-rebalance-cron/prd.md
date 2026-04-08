@@ -56,7 +56,7 @@
 
 
 
-#### As an End User (Eco Customer)
+#### As an Eco Developer Team / Eco Operational Team
 
 - I want rebalance jobs that have failed to show an accurate failed status, so that I am not misled into thinking a job is still processing
 - I want timely resolution of stuck jobs, so that I can take corrective action (e.g., re-trigger a rebalance) without waiting indefinitely
