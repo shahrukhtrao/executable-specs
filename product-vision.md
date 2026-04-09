@@ -1,9 +1,9 @@
 # Product Vision & Technical Specification — Eco / PRO
 
-**Rev:** 6 (Company OS Rewrite)
 **Owner:** CEO (Paperclip)
 **Last updated:** 2026-04-09
-**Status:** Living document — updated as board direction evolves
+**Rev:** 7
+**Status:** Living document — CEO owns, updated per board feedback
 
 ---
 
@@ -93,47 +93,47 @@ When stable, this OS should require zero human effort for operational tasks. Hum
 
 #### Executive Layer
 
-| Agent | Role | Reports To | Responsibility |
-|-------|------|------------|----------------|
-| **CEO** | ceo | Board | Strategic direction, hiring, unblocking, budget, goal-setting |
-| **CTO** | pm | CEO | Technical strategy, pipeline architecture, Linear integration |
-| **COO** | pm | CEO | Operational health, pulse audits, process compliance, blocker detection |
+| Agent | Role | Reports To | Status | Responsibility |
+|-------|------|------------|--------|----------------|
+| **CEO** | ceo | Board | Active (69% budget) | Strategic direction, hiring, unblocking, budget, goal-setting |
+| **CTO** | pm | CEO | Active (58% budget) | Technical strategy, pipeline architecture, Linear integration |
+| **COO** | pm | CEO | Active (62% budget) | Operational health, pulse audits, process compliance, blocker detection |
 
 #### Intake Pipeline (Meeting → Staging Queue)
 
-| Agent | Role | Responsibility |
-|-------|------|----------------|
-| **Granola Watcher** | engineer | Polls Granola for new meeting transcripts |
-| **Reconciler** | engineer | Parses transcripts into structured items (speakers, decisions, action items) |
-| **Classifier** | engineer | Categorizes items into 10 request types, routes to staging queue |
-| **Calendar Agent** | engineer | Schedules triage and review meetings based on human availability |
-| **Triage Listener** | engineer | Detects approval/rejection decisions in triage meetings |
+| Agent | Role | Status | Responsibility |
+|-------|------|--------|----------------|
+| **Granola Watcher** | engineer | Active (40%) | Polls Granola for new meeting transcripts |
+| **Reconciler** | engineer | Active (35%) | Parses transcripts into structured items (speakers, decisions, action items) |
+| **Classifier** | engineer | Active (31%) | Categorizes items into 10 request types, routes to staging queue |
+| **Calendar Agent** | engineer | Active (37%) | Schedules triage and review meetings based on human availability |
+| **Triage Listener** | engineer | Active (40%) | Detects approval/rejection decisions in triage meetings |
 
 #### Spec-Forward Pipeline (Staging Queue → Published Specs)
 
-| Agent | Role | Responsibility |
-|-------|------|----------------|
-| **Spec Lifecycle Manager** | pm | Orchestrates PRD → Audit → Comms lifecycle |
-| **PRD Generator** | engineer | Creates PRDs from requirements using templates |
-| **PRD Auditor** | engineer | Reviews PRDs for quality, completeness, template compliance (>= 75/100) |
-| **Product Comms Agent** | engineer | Transforms approved PRDs into customer-facing launch articles |
-| **Product Readiness Reviewer** | engineer | Pre-release readiness checks (6-dimension scorecard) |
+| Agent | Role | Status | Responsibility |
+|-------|------|--------|----------------|
+| **Spec Lifecycle Manager** | pm | Active (9%) | Orchestrates PRD → Audit → Comms lifecycle |
+| **PRD Generator** | engineer | Active (5%) | Creates PRDs from requirements using templates |
+| **PRD Auditor** | engineer | Active (6%) | Reviews PRDs for quality, completeness, template compliance (>= 75/100) |
+| **Product Comms Agent** | engineer | Active (62%) | Transforms approved PRDs into customer-facing launch articles |
+| **Product Readiness Reviewer** | engineer | Active (39%) | Pre-release readiness checks (6-dimension scorecard) |
 
 #### Operations & Integration
 
-| Agent | Role | Responsibility |
-|-------|------|----------------|
-| **Linear Sync Agent** | engineer | Syncs Paperclip ↔ Linear state for human visibility |
-| **Partner Intelligence Agent** | engineer | Maintains partner knowledge base, meeting ADRs |
-| **Founding Engineer** | engineer | Generalist IC for infra, credential integration |
+| Agent | Role | Status | Responsibility |
+|-------|------|--------|----------------|
+| **Linear Sync Agent** | engineer | Active (38%) | Syncs Paperclip ↔ Linear state for human visibility |
+| **Partner Intelligence Agent** | engineer | Active (14%) | Maintains partner knowledge base, meeting ADRs |
+| **Founding Engineer** | engineer | Active (41%) | Generalist IC for infra, credential integration |
 
 #### Oversight & Improvement
 
-| Agent | Role | Responsibility |
-|-------|------|----------------|
-| **Research Analyst 2** | engineer | Observes agent activity, issue lifecycle analytics |
-| **Process Optimizer** | engineer | Staleness monitoring, system health, process improvement |
-| **VPS Operations** | engineer | VPS infrastructure, webhook endpoints |
+| Agent | Role | Status | Responsibility |
+|-------|------|--------|----------------|
+| **Research Analyst 2** | engineer | Active (16%) | Observes agent activity, issue lifecycle analytics |
+| **Process Optimizer** | engineer | Active (40%) | Staleness monitoring, system health, process improvement |
+| **VPS Operations** | engineer | Active (5%) | VPS infrastructure, webhook endpoints |
 
 ### Data Flow Architecture
 
@@ -171,48 +171,7 @@ Triage Listener (detects decisions from triage transcript)
 | Google Calendar | Meeting scheduling | Calendar Agent | |
 | GitHub | PRDs, specs, comms docs | SLM, PRD Generator, Product Comms, Partner Intel | Branch conventions prevent conflicts |
 
-### Observability — Pulse System
-
-| Pulse Log | Owner | Purpose |
-|-----------|-------|---------|
-| COO Pulse Log | COO | Operational health, blocker status, agent utilization |
-| COO Pulse Backlog | COO | Standing backlog of operational improvements |
-| CTO Pulse Log | CTO | Technical health, pipeline status, architecture decisions |
-| VPS Ops Pulse Log | VPS Operations | Infrastructure health, uptime, webhook status |
-
----
-
-## Part 3: Work Completed To Date
-
-### Infrastructure & Setup (Complete)
-- Agent roster hired and configured (17 active, 1 paused)
-- Linear API key and Granola API credentials integrated
-- Agent instruction files configured across most agents
-- Task dedup guard implemented across P0 agents
-
-### Intake Pipeline (Operational)
-- Meeting → Granola Watcher → Reconciler → Classifier → Staging Queue — fully exercised
-- Triage detection and Linear sync — functional
-- Calendar scheduling — functional
-
-### Spec-Forward Pipeline (Partially Complete)
-- **Local Intents:** PRD written, reviewed, merged (PR #1). Product comms draft in progress (M5 stage).
-- **Stale Rebalance Cron (PROD-19):** PRD ideation meeting completed.
-- End-to-end PRD → Audit → Comms flow has been partially exercised but not completed for any single feature.
-
-### Linear Integration (In Progress)
-- Phase A-0: Board answers needed (blocked)
-- Phase A-1: Linear Agent Guidance configuration (in progress)
-- Phases A-2 through A-4: queued
-
-### Operational Health
-- COO and CTO pulse systems operational
-- Process Optimizer running staleness monitoring
-- Staging queue escalation tiers built
-
----
-
-## Part 4: The 10 Request Types
+### The 10 Request Types
 
 | # | Type | Example |
 |---|------|---------|
@@ -229,55 +188,10 @@ Triage Listener (detects decisions from triage transcript)
 
 ---
 
-## Part 5: Error Recovery & Handoff Protocols
-
-### Error Recovery Playbook
-
-| Failure | Detection | Recovery |
-|---------|-----------|----------|
-| Agent enters error state | COO pulse audit or Process Optimizer | CEO/COO investigate adapter config; restart via Paperclip |
-| Agent exhausts budget (100%) | Auto-pause by Paperclip | CEO reviews spend, adjusts budget or deprioritizes work |
-| Granola API unreachable | Granola Watcher heartbeat fails | Calendar Agent still functions; manual meeting notes as fallback |
-| Linear API unreachable | Linear Sync heartbeat fails | Work continues in Paperclip; sync resumes on recovery |
-| Misclassification | Process Optimizer weekly scan | Manual reclassification via staging queue |
-| Stale execution lock | Process Optimizer detection | Release via admin endpoint or CEO manual release |
-
-### Handoff Protocols
-
-| From | To | Trigger | Mechanism |
-|------|-----|---------|-----------|
-| Granola Watcher | Reconciler | New transcript | Staging queue item created |
-| Reconciler | Classifier | Data reconciled | Staging queue item updated |
-| Classifier | Triage Listener | Item classified | Staging queue item tagged |
-| Triage Listener | Linear Sync Agent | Human approves | Decision metadata written |
-| SLM | PRD Generator | Feature enters pipeline | Paperclip subtask assigned |
-| PRD Generator | PRD Auditor | Draft complete | Paperclip subtask assigned |
-| PRD Auditor | SLM | PRD approved/rejected | Status update + comment |
-| SLM | Product Comms Agent | Comms stage reached | Paperclip subtask assigned |
-
----
-
-## Glossary
-
-| Term | Definition |
-|------|------------|
-| **Company OS** | This system — the automated operational layer that handles everything between meetings and approved product specs |
-| **Staging queue** | Paperclip-internal queue of items awaiting human triage decision |
-| **Triage** | Human decision meeting where Shahrukh + Zev approve/reject staging items |
-| **PRD** | Product Requirements Document — 100-200 lines, template-compliant, scored >= 75 |
-| **Spec-forward pipeline** | PRD → Audit → Comms lifecycle (does NOT include tech specs) |
-| **Pulse log** | Standing issue used by executives for running health monitoring |
-| **Single-writer rule** | Each external system has one designated writer agent |
-| **Gate** | Pipeline point requiring human approval before proceeding |
-| **Auto-sync** | Routine status updates pushed to Linear, not human-gated |
-
----
-
 ## Change Log
 
-| Rev | Date | Change | Reason |
-|-----|------|--------|--------|
-| 1 | 2026-04-09 | Initial version | Board requested a written product vision for CTO instruction auditing |
-| 2-4 | 2026-04-09 | CTO investigation, COO audit, CEO synthesis | Multi-agent investigation and consolidation |
-| 5 | 2026-04-09 | Vision correction — Company OS framing | Board feedback: reframe from crypto infra pipeline to Company OS for product program management |
-| 6 | 2026-04-09 | Full rewrite as Company OS spec | Consolidated vision, architecture, agent roster, data flow, and operational playbooks into single living document |
+| Date | Rev | Change | Reason |
+|------|-----|--------|--------|
+| 2026-04-09 | 1 | Initial version | Board requested written product vision |
+| 2026-04-09 | 6 | Full rewrite: Company OS framing, removed tech spec pipeline | Board feedback: Company OS, not engineering pipeline |
+| 2026-04-09 | 7 | Aligned to PRO-523 plan Rev 5: extracted Parts 1 & 2 (Product Vision + Technical Specification), clarified Eco vs Company OS distinction, corrected agent roster and data flow | Board: vision evolved in PRO-523 — Eco (the product) vs the Company OS (this system) now clearly delineated |
